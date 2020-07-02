@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         double imc = peso / (altura * altura);
         resultado.setText(String.format("%.2f", imc));
         Intent intent1 = new Intent(getApplicationContext(),ImcDetalhesMainActivity.class);
+        intent1.putExtra("imc",imc);
         startActivity(intent1);
         }
 
